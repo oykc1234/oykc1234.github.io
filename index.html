@@ -27,21 +27,25 @@
             color: var(--text-color);
             line-height: 1.6;
             font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
         }
         
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 95%;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 15px;
+            flex: 1;
         }
         
         nav {
@@ -63,9 +67,9 @@
             display: block;
             color: white;
             text-decoration: none;
-            padding: 1.2rem 1.8rem;
+            padding: 1rem 1.5rem;
             transition: background-color 0.3s;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
         }
@@ -77,7 +81,7 @@
         
         .page {
             display: none;
-            padding: 3rem 0;
+            padding: 2rem 0;
             animation: fadeIn 0.5s ease;
             font-family: 'Times New Roman', Times, serif;
         }
@@ -102,10 +106,15 @@
         }
         
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 1.5rem;
         }
         
         .section-content {
@@ -115,6 +124,8 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             font-family: 'Times New Roman', Times, serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         .contact-info {
@@ -140,6 +151,7 @@
             color: var(--secondary-color);
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
+            font-size: 1.05rem;
         }
         
         .research-interests {
@@ -152,9 +164,9 @@
         
         .interest-tag {
             background-color: var(--light-color);
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-family: 'Times New Roman', Times, serif;
         }
         
@@ -170,6 +182,7 @@
             width: 100%;
             margin: 1.5rem 0;
             flex-wrap: wrap;
+            gap: 1%;
         }
         
         .image-grid img {
@@ -177,13 +190,15 @@
             height: auto;
             border-radius: 5px;
             margin-bottom: 1rem;
+            object-fit: cover;
+            max-height: 250px;
         }
         
         footer {
             background-color: var(--dark-color);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             margin-top: 2rem;
             font-family: 'Times New Roman', Times, serif;
         }
@@ -193,6 +208,8 @@
             height: auto;
             border-radius: 5px;
             margin: 1.5rem 0;
+            max-height: 400px;
+            object-fit: cover;
         }
         
         .info-section {
@@ -231,27 +248,28 @@
         /* 图片画廊样式 */
         .gallery-container {
             margin: 2rem 0;
-            padding: 1rem 0;
+            padding: 1.5rem;
             background-color: #f0f4f8;
             border-radius: 8px;
         }
         
         .gallery-title {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: var(--primary-color);
+            font-size: 1.8rem;
         }
         
         .publication-gallery {
             overflow-x: auto;
             white-space: nowrap;
-            padding: 10px 0;
+            padding: 15px 0;
             scrollbar-width: thin;
             scrollbar-color: var(--secondary-color) #f0f4f8;
         }
         
         .publication-gallery::-webkit-scrollbar {
-            height: 8px;
+            height: 10px;
         }
         
         .publication-gallery::-webkit-scrollbar-track {
@@ -265,16 +283,57 @@
         }
         
         .publication-gallery img {
-            height: 150px;
+            height: 180px;
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 15px;
             border-radius: 5px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         
         .publication-gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
+        }
+        
+        /* 新增样式 */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 1024px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-grid img {
+                width: 48%;
+            }
         }
         
         @media (max-width: 768px) {
@@ -295,7 +354,23 @@
             
             .contact-info {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 0.8rem;
+            }
+            
+            .publication-gallery img {
+                height: 150px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+            .section-content {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -328,83 +403,90 @@
                     </div>
                 </div>
                 
-                <h3>Education Background</h3>
-                <div class="education-item">
-                    <div class="date">2020.09 – 2024.06</div>
-                    <h4>University of Science and Technology of China</h4>
-                    <p>Bachelor of Mathematics and Applied Mathematics</p>
-                    <p>IELTS: 7.0/9.0</p>
-                    <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
+                <div class="two-column">
+                    <div>
+                        <h3>Education Background</h3>
+                        <div class="education-item">
+                            <div class="date">2020.09 – 2024.06</div>
+                            <h4>University of Science and Technology of China</h4>
+                            <p>Bachelor of Mathematics and Applied Mathematics</p>
+                            <p>IELTS: 7.0/9.0</p>
+                            <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
+                        </div>
+                        
+                        <h3>Conference Experience</h3>
+                        
+                        <div class="education-item">
+                            <p><strong>5th Amorphous Physics and Materials Symposium 2024</strong>, Attendee</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <p><strong>IEEE Congress on Evolutionary Computation (CEC) 2025</strong>, Oral Presentation</p>
+                        </div>
+                        
+                        <h3>School Experience</h3>
+                        <div class="education-item">
+                            <p><strong>2022:</strong> Mathematical Analysis B1, Teaching Assistant</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <p><strong>2024:</strong> Mathematical Modeling, Teaching Assistant</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>Research Experience</h3>
+                        <div class="education-item">
+                            <div class="date">2025.5 - Present</div>
+                            <p><strong>Data-Driven Multi-Objective Evolutionary Design of Battery Liquid Cooling Materials</strong>, USTC, RA</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="date">2024.2 - Present</div>
+                            <p><strong>Graph Neural Networks & Material Science</strong>, Songshan Lake Materials Laboratory, RA</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="date">2023.9 - 2024.4</div>
+                            <p><strong>Deep Neural Network-Based Control of Quantum Uncertain Systems</strong>, USTC, University Innovation Project</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="date">2023.5 - 2024.6</div>
+                            <p><strong>Intersection of Non-equilibrium Statistical Physics & Machine Learning</strong>, USTC, RA</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="date">2021.9 - Present</div>
+                            <p><strong>Evolutionary Algorithms & Machine Learning</strong>, Wenzhou University, RA</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="date">2021.3 - 2022.9</div>
+                            <p><strong>Non-equilibrium Statistical Physics & Complex Networks</strong>, USTC, RA</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <h3>Research Experience</h3>
-                <div class="education-item">
-                    <div class="date">2025.5 - Present</div>
-                    <p><strong>Data-Driven Multi-Objective Evolutionary Design of Battery Liquid Cooling Materials</strong>, USTC, RA</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="date">2024.2 - Present</div>
-                    <p><strong>Graph Neural Networks & Material Science</strong>, Songshan Lake Materials Laboratory, RA</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="date">2023.9 - 2024.4</div>
-                    <p><strong>Deep Neural Network-Based Control of Quantum Uncertain Systems</strong>, USTC, University Innovation Project</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="date">2023.5 - 2024.6</div>
-                    <p><strong>Intersection of Non-equilibrium Statistical Physics & Machine Learning</strong>, USTC, RA</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="date">2021.9 - Present</div>
-                    <p><strong>Evolutionary Algorithms & Machine Learning</strong>, Wenzhou University, RA</p>
-                </div>
-                
-                <div class="education-item">
-                    <div class="date">2021.3 - 2022.9</div>
-                    <p><strong>Non-equilibrium Statistical Physics & Complex Networks</strong>, USTC, RA</p>
-                </div>
-                
-                <h3>Conference Experience</h3>
-                
-                <div class="education-item">
-                    <p><strong>5th Amorphous Physics and Materials Symposium 2024</strong>, Attendee</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>IEEE Congress on Evolutionary Computation (CEC) 2025</strong>, Oral Presentation</p>
-                </div>
-                
-                <h3>School Experience</h3>
-                <div class="education-item">
-                    <p><strong>2022:</strong> Mathematical Analysis B1, Teaching Assistant</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2024:</strong> Mathematical Modeling, Teaching Assistant</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2024:</strong> Swarm and Evolutionary Computation (JCR Q1, IF: 8.2), Reviewer</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2025:</strong> Knowledge-Based Systems (JCR Q1, IF: 7.2), Reviewer</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2025:</strong> International Joint Conference on Neural Networks (IJCNN), Reviewer</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2025:</strong> International Conference on Intelligent Computing (ICIC), Reviewer</p>
-                </div>
-                
-                <div class="education-item">
-                    <p><strong>2025:</strong> AAAI 2026, Reviewer</p>
+                <div class="full-width">
+                    <h3>Reviewer Experience</h3>
+                    <div class="content-grid">
+                        <div class="card">
+                            <p><strong>2024:</strong> Swarm and Evolutionary Computation (JCR Q1, IF: 8.2), Reviewer</p>
+                        </div>
+                        <div class="card">
+                            <p><strong>2025:</strong> Knowledge-Based Systems (JCR Q1, IF: 7.2), Reviewer</p>
+                        </div>
+                        <div class="card">
+                            <p><strong>2025:</strong> International Joint Conference on Neural Networks (IJCNN), Reviewer</p>
+                        </div>
+                        <div class="card">
+                            <p><strong>2025:</strong> International Conference on Intelligent Computing (ICIC), Reviewer</p>
+                        </div>
+                        <div class="card">
+                            <p><strong>2025:</strong> AAAI 2026, Reviewer</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="info-section">
@@ -444,9 +526,109 @@
                     <span class="interest-tag">Artificial Intelligence</span>
                     <span class="interest-tag">Cognitive Science</span>
                     <span class="interest-tag">Complex Systems</span>
+                    <span class="interest-tag">Evolutionary Computation</span>
+                    <span class="interest-tag">Swarm Intelligence</span>
+                    <span class="interest-tag">Machine Learning</span>
                 </div>
             </div>
         </div>
+        
+        <!-- Publications Page -->
+        <div id="publications" class="page">
+            <h2>Publications and Preprints</h2>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, S Fu, Y Chen, Q Cai, AA Heidari, H Chen. <span class="pub-title">Escape: an optimization method based on crowd evacuation behaviors</span>. <span class="pub-journal">Artificial Intelligence Review</span> 58(1), 2024. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.1007/s10462-024-11008-6" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10462-024-11008-6</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, D Wei, X Sha, J Yu, Y Zhao, M Qiu, S Fu, AA Heidar, H Chen. <span class="pub-title">Beaver Behavior Optimizer: A Novel Metaheuristic Algorithm for Solar PV Parameter Identification and Engineering Problems</span>. <span class="pub-journal">Journal of Advanced Research</span>. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.1016/j.jare.2025.09.001" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jare.2025.09.001</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, D Wei, S Fu, S Gu, X Sha, J Yu, J Yu, AA Heidar, Z Cai, H Chen. <span class="pub-title">Multi-objective Red-billed Blue Magpie Optimizer: A Novel Algorithm for Multi-objective UAV Path Planning</span>. <span class="pub-journal">Results in Engineering</span>. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.1016/j.rineng.2025.106785" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.rineng.2025.106785</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, S Fu, Y Chen, H Chen. <span class="pub-title">Dynamic Graph Neural Evolution: An Evolutionary Framework Integrating Graph Neural Networks with Adaptive Filtering</span>. <span class="pub-journal">2025 IEEE Congress on Evolutionary Computation (Oral)</span>. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://ieeexplore.ieee.org/document/11042917" target="_blank" rel="noopener noreferrer">https://ieeexplore.ieee.org/document/11042917</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>D Wei, Z Wang, M Qiu, J Yu, J Yu, Y Jin, X Sha, <span class="pub-author">K Ouyang</span>. <span class="pub-title">Multiple Objectives Escaping Bird Search Optimization and Its application in Stock Market Prediction Based on Transformer Model</span>. <span class="pub-journal">Scientific Reports</span> 15(1), 5730, 2025. <span class="pub-role">Corresponding Author</span> <span class="pub-doi"><a href="https://doi.org/10.1038/s41598-025-88883-8" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-025-88883-8</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">A Comprehensive Analysis of Digital Inclusive Finance's Influence on High Quality Enterprise Development through Fixed Effects and Deep Learning Frameworks</span>. <span class="pub-journal">Scientific Reports</span>. <span class="pub-role">Corresponding Author</span> <span class="pub-doi"><a href="https://doi.org/10.1038/s41598-025-14610-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-025-14610-y</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>S Qiu, Y Wang, Z Ke, Q Shen, Z Li, R Zhang, <span class="pub-author">K Ouyang</span>. <span class="pub-title">A Generative Adversarial Network-Based Investor Sentiment Indicator</span>. <span class="pub-journal">Mathematics</span> 13(9), 1476, 2025. <span class="pub-role">Corresponding Author</span> <span class="pub-doi"><a href="https://doi.org/10.3390/math13091476" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/math13091476</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>JB Lian, <span class="pub-author">K Ouyang</span>, R Zhong, Y Zhang, S Luo, L Ma, X Wu, H Chen. <span class="pub-title">Trend-Aware Mechanism for metaheuristic algorithms</span>. <span class="pub-journal">Applied Soft Computing</span>, 2025. <span class="pub-role">Second Author</span> <span class="pub-doi"><a href="https://doi.org/10.1016/j.asoc.2025.113505" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.asoc.2025.113505</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>YQ Wang, C Xu, ML Fang, TZ Li, LW Zhang, DS Wei, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Study of nonequilibrium phase transitions mechanisms in exclusive network and node model of heterogeneous assignment based on real experimental data of KIF3AC and KIF3CC motors</span>. <span class="pub-journal">The European Physical Journal Plus</span> 137(10), 1-22, 2022. <span class="pub-role">Co Author</span> <span class="pub-doi"><a href="https://doi.org/10.1140/epjp/s13360-022-03372-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1140/epjp/s13360-022-03372-5</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>YQ Wang, DS Wei, LW Zhang, TY Zhang, TZ Li, ML Fang, <span class="pub-author">KC Ouyang</span>, et al. <span class="pub-title">Physical mechanisms of exit dynamics in microchannels</span>. <span class="pub-journal">International Journal of Modern Physics B</span> 38(15), 2450193. <span class="pub-role">Co Author</span> <span class="pub-doi"><a href="https://doi.org/10.1142/S0217979224501935" target="_blank" rel="noopener noreferrer">https://doi.org/10.1142/S0217979224501935</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang‡</span>, S Zhang‡, S Liu‡, J Tian, Y Li, H Tong, H Bai, YC Hu, WH Wang. <span class="pub-title">Graph Learning Metallic Glass Discovery from Wikipedia</span>. <span class="pub-journal">Nature Machine Intelligence</span> (Under Review). <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2507.19536" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2507.19536</a></span></p>
+                    </div>
+
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, S Fu. <span class="pub-title">Learn from Global Correlations: Enhancing Evolutionary Algorithm via Spectral GNN</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2412.17629, 2024. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2412.17629" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2412.17629</a></span></p>
+                    </div>
+
+                
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>, T Hou, JJ Lian, S Fu, Z Ke, D Wei, M Qiu, J Ouyang. <span class="pub-title">Stochastic Gradient-guided Adaptive Differential Evolution: Algorithm and Its Application in the Diagnosis of COVID-19, Influenza, and Bacterial Pneumonia</span>. <span class="pub-journal">Artificial Intelligence In Medicine</span> (Under Review). <span class="pub-role">First Author</span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Rethinking Over-Smoothing in Graph Neural Networks: A Perspective from Anderson Localization</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.05263, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.05263" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2507.05263</a></span></p>
+                    </div>
+
+
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Consciousness as a Jamming Phase</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.08197, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.08197" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2507.08197</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Why Flow Matching is Particle Swarm Optimization?</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.20810, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.20810" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2507.20810</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>J Yu, J Yu, D Wei, X Sha, S Fu, M Qiu, Y Jin, <span class="pub-author">K Ouyang</span>. <span class="pub-title">Multi-Objective Mobile Damped Wave Algorithm (MOMDWA): A Novel Approach For Quantum System Control</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2502.05228, 2025. <span class="pub-role">Corresponding Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2502.05228" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2502.05228</a></span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>W Xiao, JJ Lian, <span class="pub-author">K Ouyang</span>, S Gu, Z Ke, D Wei, X Sha, J Wang, S Fu, M Qiu, C Xu. <span class="pub-title">Newton Downhill Optimizer for Global Optimization with Application to Breast Cancer Feature Selection</span>. <span class="pub-journal">Biomedical Signal Processing and Control</span> (Under Review). <span class="pub-role">Corresponding Author</span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>D Wei, <span class="pub-author">K Ouyang</span>, Z Wang, X Sha, M Qiu, Z Yi, AA Heidari, H Chen. <span class="pub-title">Multi-strategy boosted dung beetle algorithm and its application for bankruptcy prediction</span>. <span class="pub-journal">Neural Networks</span> (Under Review). <span class="pub-role">Corresponding Author</span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>JJ Lian, H Chen, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Twisted Convolutional Networks (TCNs): Enhancing Feature Interactions for Non-Spatial Data Classification</span>. <span class="pub-journal">Neural Networks</span> (Under Review). <span class="pub-role">Co Author</span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>JJ Lian, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">IKUN: A mean-field game theoretic KD-tree density guided mechanism for swarm optimization</span>. <span class="pub-journal">Swarm and Evolutionary Computation</span> (Under Review). <span class="pub-role">Co Author</span></p>
+                    </div>
+                    
+                    <div class="publication-item card">
+                        <p>S Gu, ..., <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization</span>. <span class="pub-journal">Communications In Nonlinear Science And Numerical Simulation</span> (Under Review). <span class="pub-role">Co Author</span></p>
+                    </div>
+                </div>
+            </div>
         
         <!-- Publications Page -->
         <div id="publications" class="page">
