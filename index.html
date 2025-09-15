@@ -3,255 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaichen Ouyang - Data-Driven Complex Adaptive Systems for Decision-Making</title>
+    <title>Kaichen Ouyang - Personal Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+        }
+        
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            color: #333;
+            padding: 0 15px;
         }
+        
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
         h1, h2, h3 {
-            color: #2c3e50;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        
+        h1 {
+            font-size: 2.5rem;
         }
-        .image-row {
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .education-item, .honor-item, .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .education-item:last-child, .honor-item:last-child, .publication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .date {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .interest-tag {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .publication-status {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .image-grid {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            margin: 20px 0;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
-        .image-row img {
+        
+        .image-grid img {
             width: 32%;
             height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
         }
-        .publication-gallery {
-            overflow-x: auto;
-            white-space: nowrap;
-            margin: 20px 0;
-        }
-        .publication-gallery img {
-            height: 150px;
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .badge {
-            display: inline-block;
-            padding: 3px 7px;
-            border-radius: 3px;
-            background-color: #4285f4;
+        
+        footer {
+            background-color: var(--dark-color);
             color: white;
-            font-size: 0.8em;
-            margin-right: 5px;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
         }
-        .publication-item {
-            margin-bottom: 15px;
-        }
-        .author-note {
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-        .section-divider {
-            border-top: 1px solid #ddd;
-            margin: 30px 0;
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .image-grid img {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Data-Driven Complex Adaptive Systems for Decision-Making — Kaichen Ouyang</h1>
-
-    <p>In nature, biological evolution, physical dynamics, and learning behavior form three interconnected adaptive mechanisms: Biological evolution & swarm intelligence drive adaptation through both genetic variation/natural selection and emergent collective behaviors; physical dynamics govern nonequilibrium systems' self-organization toward equilibrium states (e.g., thermodynamic entropy increase and dissipative structures); while learning enables individual behavioral adaptation through experience and interaction with the environment. This includes the reward hypothesis, where behavior is adapted based on the feedback received from actions, allowing individuals to optimize their strategies to achieve long-term goals. Additionally, neural networks model the brain's learning processes by adjusting the connections between neurons, similar to synaptic plasticity, improving decision-making through experience. Together, these mechanisms shape complex adaptive behaviors across scales.</p>
-
-    <img width="1269" height="707" alt="image" src="https://github.com/user-attachments/assets/42b57c67-f950-4340-b89e-16b885bf78b8" />
-
-    <p>Specifically, these three adaptive mechanisms correspond to three distinct research domains: (1) evolutionary computation simultaneously models both biological evolution (through population-based genetic optimization) and swarm intelligence behaviors (via emergent agent coordination mechanisms), thereby capturing two fundamental layers of biological adaptation. (2) statistical physics formally characterizes self-organization via disorder-to-order transitions mathematically equivalent to physical phase transitions; and (3) machine learning explicitly emulates biological learning through both neural network training grounded in synaptic plasticity principles and reinforcement learning, where behaviors are adapted based on feedback from interactions with the environment, optimizing strategies to maximize long-term rewards. However, contemporary artificial intelligence has predominantly focused on intelligence paradigms centered around human intelligence (e.g., neural networks simulating cortical information processing), while systematically neglecting two equally fundamental adaptive mechanisms in nature: (1) evolutionary and swarm intelligence in biological systems, and (2) self-organizing intelligence in physical systems. I contend that advancing artificial intelligence requires moving beyond this anthropocentric paradigm to incorporate these more universal forms of natural intelligence. These systems demonstrate unique elegance through their inherent adaptive mechanisms. We are perpetually inspired by nature's ingenuity manifested in such self-organizing intelligence. I maintain that natural adaptation consistently surpasses artificial intervention in efficacy. My primary research therefore focuses on constructing data-driven frameworks to understand and harness these systems for enhanced decision-making.</p>
-
-    <h2>Research Interests:</h2>
-    <p>Artificial Intelligence | Cognitive Science | Complex System</p>
-
-    <div class="image-row">
-        <img src="https://github.com/user-attachments/assets/621ad91a-c85c-4a58-b979-22532740952c">
-        <img src="https://github.com/user-attachments/assets/fceb4297-9f13-4c1f-8eae-6bdd01b1c25a">
-        <img src="https://github.com/user-attachments/assets/9f306bb7-b502-4956-a17c-ca3f8acac314">
-    </div>
-
-    <div class="section-divider"></div>
-
-    <h2>Publication:</h2>
-
-    <p>
-        <a href="https://scholar.google.com/citations?user=mbXU6jIAAAAJ&hl=en" style="text-decoration: none;">
-            <span class="badge">Google Scholar</span>
-        </a>
-        <em>Complete publication list available on Google Scholar</em>
-    </p>
-
-    <div class="publication-item">
-        <p><strong>❶ Escape: an optimization method based on crowd evacuation behaviors</strong></p>
-        <p><strong>K Ouyang</strong>, S Fu, Y Chen, Q Cai, AA Heidari, H Chen</p>
-        <p><strong>Artificial Intelligence Review</strong> 58(1), 2024</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ A Generative Adversarial Network-Based Investor Sentiment Indicator</strong></p>
-        <p>S Qiu, Y Wang, Z Ke, Q Shen, Z Li, R Zhang, <strong>K Ouyang✉</strong></p>
-        <p><strong>Mathematics</strong> 13(9), 1476, 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ Multiple objectives escaping bird search optimization and its application in stock market prediction based on transformer model</strong></p>
-        <p>D Wei, Z Wang, M Qiu, J Yu, J Yu, Y Jin, X Sha, <strong>K Ouyang✉</strong></p>
-        <p><strong>Scientific Reports</strong> 15(1), 5730, 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Learn from Global Correlations: Enhancing Evolutionary Algorithm via Spectral GNN</strong></p>
-        <p><strong>K Ouyang</strong>, S Fu</p>
-        <p><strong>arXiv preprint</strong> arXiv:2412.17629, 2024</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Study of nonequilibrium phase transitions mechanisms in exclusive network and node model of heterogeneous assignment based on real experimental data of KIF3AC and KIF3CC motors</strong></p>
-        <p>YQ Wang, C Xu, ML Fang, TZ Li, LW Zhang, DS Wei, K Ouyang, ...</p>
-        <p><strong>The European Physical Journal Plus</strong> 137(10), 1-22, 2022</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Dynamic Graph Neural Evolution: An Evolutionary Framework Integrating Graph Neural Networks with Adaptive Filtering</strong></p>
-        <p><strong>K Ouyang</strong>, S Fu, Y Chen, H Chen</p>
-        <p><strong>IEEE Congress on Evolutionary Computation</strong>, 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Physical mechanisms of exit dynamics in microchannels</strong></p>
-        <p>YQ Wang, DS Wei, LW Zhang, TY Zhang, TZ Li, ML Fang, KC Ouyang, ...</p>
-        <p><strong>International Journal of Modern Physics B</strong> 38(15), 2450193</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Graph Learning Metallic Glass Discovery from Wikipedia</strong></p>
-        <p><strong>K Ouyang‡</strong>, S Zhang‡, S Liu‡, J Tian, Y Li, H Tong, H Bai, YC Hu, WH Wang</p>
-        <p><strong>Nature Machine Intelligence</strong> (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Rethinking Over-Smoothing in Graph Neural Networks: A Perspective from Anderson Localization</strong></p>
-        <p><strong>K Ouyang</strong></p>
-        <p><strong>arXiv preprint</strong> arXiv:2507.05263 , 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Trend-Aware Mechanism for metaheuristic algorithms</strong></p>
-        <p>JB Lian, <strong>K Ouyang</strong>, R Zhong, Y Zhang, S Luo, L Ma, X Wu, H Chen</p>
-        <p><strong>Applied Soft Computing</strong>, 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Consciousness as a Jamming Phase</strong></p>
-        <p><strong>K Ouyang</strong></p>
-        <p><strong>arXiv preprint</strong> arXiv.2507.08197 , 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Multi-objective Red-billed Blue Magpie Optimizer: A Novel Algorithm for Multi-objective UAV Path Planning</strong></p>
-        <p><strong>K Ouyang</strong>, D Wei, S Fu, S Gu, X Sha, J Yu, J Yu, AA Heidar, Z Cai, H Chen</p>
-        <p><strong>Results in Engineering</strong></p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ Newton Downhill Optimizer for Global Optimization with Application to Breast Cancer Feature Selection</strong></p>
-        <p>W Xiao, JJ Lian, <strong>K Ouyang✉</strong>, S Gu, Z Ke, D Wei, X Sha, J Wang, S Fu, M Qiu, C Xu</p>
-        <p><strong>Biomedical Signal Processing and Control</strong>, (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ A Comprehensive Analysis of Digital Inclusive Finance's Influence on High Quality Enterprise Development through Fixed Effects and Deep Learning Frameworks</strong></p>
-        <p>D Wei, Z Wang, H Kang, X Sha, Y Xie, A Dai, <strong>K Ouyang✉</strong></p>
-        <p><strong>Scientific Reports</strong></p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Beaver Behavior Optimizer: A Novel Metaheuristic Algorithm for Solar PV Parameter Identification and Engineering Problems</strong></p>
-        <p><strong>K Ouyang</strong>, D Wei, X Sha, J Yu, Y Zhao, M Qiu, S Fu, AA Heidar, H Chen</p>
-        <p><strong>Journal of Advanced Research</strong></p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ Multi-Objective Mobile Damped Wave Algorithm (MOMDWA): A Novel Approach For Quantum System Control</strong></p>
-        <p>J Yu, J Yu, D Wei, X Sha, S Fu, M Qiu, Y Jin, <strong>K Ouyang✉</strong></p>
-        <p><strong>arXiv preprint</strong> arXiv:2502.05228 , 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Stochastic Gradient-guided Adaptive Differential Evolution: Algorithm and Its Application in the Diagnosis of COVID-19, Influenza, and Bacterial Pneumonia</strong></p>
-        <p><strong>K Ouyang</strong>,T Hou,JJ Lian,S Fu,Z Ke,D Wei, M Qiu,J Ouyang</p>
-        <p><strong>Artificial Intelligence In Medicine</strong>, (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>✉ Multi-strategy boosted dung beetle algorithm and its application for bankruptcy prediction</strong></p>
-        <p>D Wei,<strong>K Ouyang✉</strong>, Z Wang, X Sha, M Qiu, Z Yi, AA Heidari, H Chen</p>
-        <p><strong>Neural Networks</strong>, (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>IKUN: A mean-field game theoretic KD-tree density guided mechanism for swarm optimization</strong></p>
-        <p>JJ Lian, K Ouyang...</p>
-        <p><strong>Swarm and Evolutionary Computation</strong>, (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>❶ Why Flow Matching is Particle Swarm Optimization?</strong></p>
-        <p><strong>K Ouyang</strong></p>
-        <p><strong>arXiv preprint</strong>, arXiv.2507.20810 , 2025</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Enhancing feature interactions for non-spatial data classification</strong></p>
-        <p>JJ Lian, H Chen, K Ouyang ...</p>
-        <p><strong>Neural Networks</strong>, (Under Review)</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization</strong></p>
-        <p>S Gu, ..., K Ouyang ...</p>
-        <p><strong>Communications In Nonlinear Science And Numerical Simulation</strong>, (Under Review)</p>
-    </div>
-
-    <h2>Publication Gallery</h2>
-    <div class="publication-gallery">
-        <img src="https://github.com/user-attachments/assets/fed7b6c1-7806-471b-a591-863fa509f867">
-        <img src="https://github.com/user-attachments/assets/bee2d407-d06e-4ad3-b38a-77ee1c5ad230">
-        <img src="https://github.com/user-attachments/assets/e8af1c48-fc8a-47c5-8a80-919906c88dce">
-        <img src="https://github.com/user-attachments/assets/88ef3402-cc5a-423b-928a-fe24f915fa43">
-        <img src="https://github.com/user-attachments/assets/aacc46e4-b6ba-4c67-9dda-45c74ed895e5">
-        <img src="https://github.com/user-attachments/assets/791127fe-84c6-4935-8e63-4f3bc4eb76c3">
-        <img src="https://github.com/user-attachments/assets/14f71135-bc34-4d5e-8640-7a80938634b0">
-        <img src="https://github.com/user-attachments/assets/cbce6541-e06c-4435-8549-3e03ade74ddf">
-        <img src="https://github.com/user-attachments/assets/13cf97f6-516d-486b-b104-42d8e4f0f049">
-        <img src="https://github.com/user-attachments/assets/e9269a3f-9f15-48cb-a68b-020ad4b94223">
-        <img src="https://github.com/user-attachments/assets/80a07dc0-fc68-4338-8960-2216113894f7">
-        <img src="https://github.com/user-attachments/assets/2c1709a2-0379-4817-9188-a1996a3bc3e9">
-        <img src="https://github.com/user-attachments/assets/b07cd49c-4374-41cd-85ce-63b880ef0f4a">
-        <img src="https://github.com/user-attachments/assets/99ba3ef1-d28a-4b56-acdb-4dc16bb24d00">
-        <img src="https://github.com/user-attachments/assets/ac5371b8-9f2c-4135-8dcf-d1debe407a87">
-    </div>
-
-    <p class="author-note"><sub>❶ First author | ✉ Corresponding author | [Full Publications](https://scholar.google.com/citations?user=mbXU6jIAAAAJ&hl=en)</sub></p>
-
-    <div class="section-divider"></div>
-
-    <p><strong>I believe that a solid foundation in mathematics and physics is essential for conducting advanced research in artificial intelligence.</strong></p>
-
-    <ul>
-        <li><strong>Mathematical Foundations</strong>: Mathematical Analysis, Linear Algebra, Real Analysis, Complex Analysis, Functional Analysis, Differential Equations, Dynamical Systems, Random Process</li>
-        <li><strong>Physical Foundations</strong>: Thermodynamics and Statistical Physics, Quantum Mechanics, Theoretical Mechanics, Electrodynamics, Solid-State Physics, Quantum Field Theory, Computational Physics</li>
-    </ul>
+    <header>
+        <div class="container">
+            <h1>Kaichen Ouyang</h1>
+            <div class="contact-info">
+                <div>Email: oykc@mail.ustc.edu.cn</div>
+                <div>Tel: +86 15888787619</div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research Interests</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#honors">Honors</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <p>I am a Mathematics graduate from the University of Science and Technology of China with a strong research background in artificial intelligence, cognitive science, and complex systems. My work focuses on developing data-driven frameworks to understand and harness natural adaptive mechanisms for enhanced decision-making.</p>
+                
+                <div class="contact-info">
+                    <div>
+                        <strong>Google Scholar:</strong> 
+                        <a href="https://scholar.google.com/citations?hl=en&user=mbXU6jIAAAAJ&view_op=list_works&gmla=AIfU4H6jC" target="_blank">View Profile</a>
+                    </div>
+                    <div>
+                        <strong>Homepage:</strong> 
+                        <a href="https://github.com/oykc1234/Blog" target="_blank">Visit Blog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education Background</h2>
+            <div class="section-content">
+                <div class="education-item">
+                    <div class="date">2020.09 – 2024.06</div>
+                    <h3>University of Science and Technology of China</h3>
+                    <p>Bachelor of Mathematics and Applied Mathematics</p>
+                    <p>GPA: 82.04/100 | IELTS: 7.0/9.0</p>
+                    <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research">
+            <h2>Research Interests Overview</h2>
+            <div class="section-content">
+                <h3>Data-Driven Complex Adaptive Systems for Decision-Making</h3>
+                
+                <p>In nature, biological evolution, physical dynamics, and learning behavior form three interconnected adaptive mechanisms: Biological evolution & swarm intelligence drive adaptation through both genetic variation/natural selection and emergent collective behaviors; physical dynamics govern nonequilibrium systems' self-organization toward equilibrium states (e.g., thermodynamic entropy increase and dissipative structures); while learning enables individual behavioral adaptation through experience and interaction with the environment. This includes the reward hypothesis, where behavior is adapted based on the feedback received from actions, allowing individuals to optimize their strategies to achieve long-term goals. Additionally, neural networks model the brain's learning processes by adjusting the connections between neurons, similar to synaptic plasticity, improving decision-making through experience. Together, these mechanisms shape complex adaptive behaviors across scales.</p>
+                
+                <img src="https://github.com/user-attachments/assets/42b57c67-f950-4340-b89e-16b885bf78b8" alt="Research visualization" style="width: 100%; height: auto; margin: 1.5rem 0; border-radius: 5px;">
+                
+                <p>Specifically, these three adaptive mechanisms correspond to three distinct research domains: (1) evolutionary computation simultaneously models both biological evolution (through population-based genetic optimization) and swarm intelligence behaviors (via emergent agent coordination mechanisms), thereby capturing two fundamental layers of biological adaptation. (2) statistical physics formally characterizes self-organization via disorder-to-order transitions mathematically equivalent to physical phase transitions; and (3) machine learning explicitly emulates biological learning through both neural network training grounded in synaptic plasticity principles and reinforcement learning, where behaviors are adapted based on feedback from interactions with the environment, optimizing strategies to maximize long-term rewards. However, contemporary artificial intelligence has predominantly focused on intelligence paradigms centered around human intelligence (e.g., neural networks simulating cortical information processing), while systematically neglecting two equally fundamental adaptive mechanisms in nature: (1) evolutionary and swarm intelligence in biological systems, and (2) self-organizing intelligence in physical systems. I contend that advancing artificial intelligence requires moving beyond this anthropocentric paradigm to incorporate these more universal forms of natural intelligence. These systems demonstrate unique elegance through their inherent adaptive mechanisms. We are perpetually inspired by nature's ingenuity manifested in such self-organizing intelligence. I maintain that natural adaptation consistently surpasses artificial intervention in efficacy. My primary research therefore focuses on constructing data-driven frameworks to understand and harness these systems for enhanced decision-making.</p>
+                
+                <h3>Research Interests:</h3>
+                <div class="research-interests">
+                    <span class="interest-tag">Artificial Intelligence</span>
+                    <span class="interest-tag">Cognitive Science</span>
+                    <span class="interest-tag">Complex Systems</span>
+                </div>
+                
+                <div class="image-grid">
+                    <img src="https://github.com/user-attachments/assets/621ad91a-c85c-4a58-b979-22532740952c" alt="Research image 1">
+                    <img src="https://github.com/user-attachments/assets/fceb4297-9f13-4c1f-8eae-6bdd01b1c25a" alt="Research image 2">
+                    <img src="https://github.com/user-attachments/assets/9f306bb7-b502-4956-a17c-ca3f8acac314" alt="Research image 3">
+                </div>
+            </div>
+        </section>
+        
+        <section id="publications">
+            <h2>Publications and Preprints</h2>
+            <div class="section-content">
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. Escape: an optimization method based on crowd evacuation behaviors. Artificial Intelligence Review. (JCR Q1, IF:13.9) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Beaver Behavior Optimizer: A Novel Metaheuristic Algorithm for Solar PV Parameter Identification and Engineering Problems Journal of Advanced Research (JCR Q1, IF:13.0) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Multi-objective Red-billed Blue Magpie Optimizer: A Novel Algorithm for Multi-objective UAV Path Planning Results in Engineering (JCR Q1, IF:7.9) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. Dynamic Graph Neural Evolution:An Evolutionary Framework Integrating Graph Neural Networks with Adaptive Filtering. 2025 IEEE Congress on Evolutionary Computation (Oral) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. Multiple Objectives Escaping Bird Search Optimization and Its application in Stock Market Prediction Based on Transformer Model. Scientific Reports. (JCR Q1, IF:3.9) -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. A Comprehensive Analysis of Digital Inclusive Finance's Influence on High Quality Enterprise Development through Fixed Effects and Deep Learning Frameworks. Scientific Reports. (JCR Q1, IF:3.9) -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al A Generative Adversarial Network Based Investor Sentiment Indicator: Superior Predictability for the Stock Market Mathematics (JCR Q1, IF:2.2) -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Trend-Aware Mechanism for metaheuristic algorithms Applied Soft Computing (JCR Q1, IF:6.6) -- <em>Second Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. Study of nonequilibrium phase transitions mechanisms in exclusive network and node model of heterogeneous assignment based on real experimental data of KIF3AC and KIF3CC motors. European Physical Journal Plus. (JCR Q2, IF:2.8) -- <em>Co Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al. Physical mechanisms of exit dynamics in microchannels of nonequilibrium transport systems. International Journal of Modern Physics B. (JCR Q2, IF:2.6) -- <em>Co Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Graph Learning Metallic Glass Discovery from Wikipedia Summit in Nature machine intelligence (JCR Q1, IF:23.9) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Learn from Global Correlations: Enhancing Evolutionary Algorithm via Spectral GNN Summit in 2025 Neural Information processing Systems (Arxiv) -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Stochastic Gradient-guided Adaptive Differential Evolution: Algorithm and Its Application in the Diagnosis of COVID-19, Influenza, and Bacterial Pneumonia Artificial Intelligence In Medicine (JCR Q1, IF:6.1), Under review -- <em>First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Rethinking Over-Smoothing in Graph Neural Networks: A Perspective from Anderson Localization (Arxiv) -- <em>Sole First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Consciousness as a Jamming Phase (Arxiv) -- <em>Sole First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Why Flow Matching is Particle Swarm Optimization? (Arxiv) -- <em>Sole First Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Multi-Objective Mobile Damped Wave Algorithm (MOMDWA): A Novel Approach For Quantum System Control (Arxiv) -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Newton Downhill Optimizer for Global Optimization with Application to Breast Cancer Feature Selection Biomedical Signal Processing and Control (JCR Q1, IF:4.9), Under review -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Multi-strategy improved dung beetle algorithm and its applications in engineering optimization and bankruptcy prediction Neural Networks (JCR Q1,IF:6.3), Under review -- <em>Corresponding Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong>, et al Twisted Convolutional Networks (TCNs): Enhancing Feature Interactions for Non-Spatial Data Classification Neural Networks (JCR Q1,IF:6.3), Under review -- <em>Co Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong> IKUN: A mean-field game theoretic KD-tree density guided mechanism for swarm optimization Swarm and Evolutionary Computation (JCR Q1,IF:8.5), Under review -- <em>Co Author</em></p>
+                </div>
+                
+                <div class="publication-item">
+                    <p><strong>Ouyang, K.</strong> Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization (JCR Q1,IF:3.8), Under review -- <em>Co Author</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="honors">
+            <h2>Honors and Awards</h2>
+            <div class="section-content">
+                <div class="honor-item">
+                    <div class="date">2024</div>
+                    <p>Second Prize (Honorable Mention), MCM/ICM</p>
+                </div>
+                
+                <div class="honor-item">
+                    <div class="date">2023</div>
+                    <p>First Prize (Meritorious), Huashu Cup International Mathematical Contest in Modeling</p>
+                </div>
+                
+                <div class="honor-item">
+                    <div class="date">2023</div>
+                    <p>First Prize, National College Students' Mathematics Competition</p>
+                </div>
+                
+                <div class="honor-item">
+                    <div class="date">2022</div>
+                    <p>International Second Prize, Asia-Pacific Mathematical Modeling Competition</p>
+                </div>
+                
+                <div class="honor-item">
+                    <div class="date">2020-2021</div>
+                    <p>Outstanding Student Gold Award, University of Science and Technology of China</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kaichen Ouyang. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
