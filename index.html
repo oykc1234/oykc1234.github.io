@@ -195,6 +195,20 @@
             margin: 1.5rem 0;
         }
         
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .info-block {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -226,7 +240,6 @@
     <nav>
         <ul>
             <li><a href="#about" class="nav-link active" data-page="about">About Me</a></li>
-            <li><a href="#education" class="nav-link" data-page="education">Education</a></li>
             <li><a href="#research" class="nav-link" data-page="research">Research Interests</a></li>
             <li><a href="#publications" class="nav-link" data-page="publications">Publications</a></li>
             <li><a href="#honors" class="nav-link" data-page="honors">Honors</a></li>
@@ -234,7 +247,7 @@
     </nav>
     
     <main class="container">
-        <!-- About Me Page -->
+        <!-- About Me Page (now includes Education) -->
         <div id="about" class="page active">
             <h2>About Me</h2>
             <div class="section-content">
@@ -245,6 +258,15 @@
                         <strong>Google Scholar:</strong> 
                         <a href="https://scholar.google.com/citations?hl=en&user=mbXU6jIAAAAJ&view_op=list_works&gmla=AIfU4H6jC" target="_blank">View Profile</a>
                     </div>
+                </div>
+                
+                <h3>Education Background</h3>
+                <div class="education-item">
+                    <div class="date">2020.09 – 2024.06</div>
+                    <h4>University of Science and Technology of China</h4>
+                    <p>Bachelor of Mathematics and Applied Mathematics</p>
+                    <p>IELTS: 7.0/9.0</p>
+                    <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
                 </div>
                 
                 <h3>Research Experience</h3>
@@ -276,39 +298,6 @@
                 <div class="education-item">
                     <div class="date">2021.3 - 2022.9</div>
                     <p><strong>Non-equilibrium Statistical Physics & Complex Networks</strong>, USTC, RA</p>
-                </div>
-                
-                <div class="info-section">
-                  <div class="info-block">
-                    <h3>Skills</h3>
-                    <p><strong>Language skills:</strong> Chinese (Native), English (Fluent)</p>
-                    <p><strong>Computer Skills:</strong> Microsoft Office 365, Python, MATLAB, MySQL, Java, C/C++, Lammps</p>
-                  </div>
-                  
-                   <div class="info-block" style="margin-top: 30px;">
-                    <h3>Contact</h3>
-                    <p><strong>Email:</strong> oykc@mail.ustc.edu.cn</p>
-                    <p><strong>Tel:</strong> +86 15888787619</p>
-                  </div>
-                    
-                </div>
-
-                
-</div>
-        </div>
-            </div>
-        </div>
-        
-        <!-- Education Page -->
-        <div id="education" class="page">
-            <h2>Education Background</h2>
-            <div class="section-content">
-                <div class="education-item">
-                    <div class="date">2020.09 – 2024.06</div>
-                    <h3>University of Science and Technology of China</h3>
-                    <p>Bachelor of Mathematics and Applied Mathematics</p>
-                    <p>IELTS: 7.0/9.0</p>
-                    <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
                 </div>
                 
                 <h3>Conference Experience</h3>
@@ -363,6 +352,20 @@
                 
                 <div class="education-item">
                     <p><strong>2025:</strong> AAAI 2026, Reviewer</p>
+                </div>
+                
+                <div class="info-section">
+                  <div class="info-block">
+                    <h3>Skills</h3>
+                    <p><strong>Language skills:</strong> Chinese (Native), English (Fluent)</p>
+                    <p><strong>Computer Skills:</strong> Microsoft Office 365, Python, MATLAB, MySQL, Java, C/C++, Lammps</p>
+                  </div>
+                  
+                   <div class="info-block" style="margin-top: 30px;">
+                    <h3>Contact</h3>
+                    <p><strong>Email:</strong> oykc@mail.ustc.edu.cn</p>
+                    <p><strong>Tel:</strong> +86 15888787619</p>
+                  </div>
                 </div>
             </div>
         </div>
