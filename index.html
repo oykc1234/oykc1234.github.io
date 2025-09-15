@@ -64,12 +64,24 @@
             transition: background-color 0.3s;
         }
         
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.2);
         }
         
-        section {
+        .page {
+            display: none;
             padding: 3rem 0;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         h1, h2, h3 {
@@ -160,6 +172,13 @@
             margin-top: 2rem;
         }
         
+        .research-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -190,16 +209,17 @@
     
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#research">Research Interests</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#honors">Honors</a></li>
+            <li><a href="#about" class="nav-link active" data-page="about">About Me</a></li>
+            <li><a href="#education" class="nav-link" data-page="education">Education</a></li>
+            <li><a href="#research" class="nav-link" data-page="research">Research Interests</a></li>
+            <li><a href="#publications" class="nav-link" data-page="publications">Publications</a></li>
+            <li><a href="#honors" class="nav-link" data-page="honors">Honors</a></li>
         </ul>
     </nav>
     
     <main class="container">
-        <section id="about">
+        <!-- About Me Page -->
+        <div id="about" class="page active">
             <h2>About Me</h2>
             <div class="section-content">
                 <p>I am a Mathematics graduate from the University of Science and Technology of China with a strong research background in artificial intelligence, cognitive science, and complex systems. My work focuses on developing data-driven frameworks to understand and harness natural adaptive mechanisms for enhanced decision-making.</p>
@@ -214,30 +234,121 @@
                         <a href="https://github.com/oykc1234/Blog" target="_blank">Visit Blog</a>
                     </div>
                 </div>
+                
+                <h3>Research Experience</h3>
+                <div class="education-item">
+                    <div class="date">2025.5 - Present</div>
+                    <p><strong>Data-Driven Multi-Objective Evolutionary Design of Battery Liquid Cooling Materials</strong>, USTC, RA</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="date">2024.2 - Present</div>
+                    <p><strong>Graph Neural Networks & Material Science</strong>, Songshan Lake Materials Laboratory, RA</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="date">2023.9 - 2024.4</div>
+                    <p><strong>Deep Neural Network-Based Control of Quantum Uncertain Systems</strong>, USTC, University Innovation Project</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="date">2023.5 - 2024.6</div>
+                    <p><strong>Intersection of Non-equilibrium Statistical Physics & Machine Learning</strong>, USTC, RA</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="date">2021.9 - Present</div>
+                    <p><strong>Evolutionary Algorithms & Machine Learning</strong>, Wenzhou University, RA</p>
+                </div>
+                
+                <div class="education-item">
+                    <div class="date">2021.3 - 2022.9</div>
+                    <p><strong>Non-equilibrium Statistical Physics & Complex Networks</strong>, USTC, RA</p>
+                </div>
+                
+                <h3>Skills</h3>
+                <p><strong>Language skills:</strong> Chinese (Native), English (Fluent)</p>
+                <p><strong>Computer Skills:</strong> Microsoft Office 365, Python, MATLAB, MySQL, Java, C/C++, Lammps</p>
             </div>
-        </section>
+        </div>
         
-        <section id="education">
+        <!-- Education Page -->
+        <div id="education" class="page">
             <h2>Education Background</h2>
             <div class="section-content">
                 <div class="education-item">
                     <div class="date">2020.09 – 2024.06</div>
                     <h3>University of Science and Technology of China</h3>
                     <p>Bachelor of Mathematics and Applied Mathematics</p>
-                    <p>IELTS: 7.0/9.0</p>
+                    <p>GPA: 82.04/100 | IELTS: 7.0/9.0</p>
                     <p>Certificate: Plan for strengthening basic academic disciplines, Strengthening Foundation Plan in Mathematics</p>
                 </div>
+                
+                <h3>Conference Experience</h3>
+                <div class="education-item">
+                    <p><strong>CAMMIC 2023:</strong> Discrete Optimization and Optimization of Ethanol Preparation Problem</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>IEEE ICSP 2023:</strong> Quantitative Supervised Learning System of Light Pollution and Its Application</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>IEEE CVIDL 2023:</strong> Intelligent Thermostatic Cold Storage Design Strategies based on Monte Carlo and Graph Neural Networks</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>MAEIE 2024:</strong> Multi-Objective Fertilization Optimization: A New Approach for Microgrid Scheduling</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>5th Amorphous Physics and Materials Symposium 2024</strong>, Attendee</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>IEEE Congress on Evolutionary Computation (CEC) 2025</strong>, Oral Presentation</p>
+                </div>
+                
+                <h3>School Experience</h3>
+                <div class="education-item">
+                    <p><strong>2022:</strong> Mathematical Analysis B1, Teaching Assistant</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2024:</strong> Mathematical Modeling, Teaching Assistant</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2024:</strong> Swarm and Evolutionary Computation (JCR Q1, IF: 8.2), Reviewer</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2025:</strong> Knowledge-Based Systems (JCR Q1, IF: 7.2), Reviewer</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2025:</strong> International Joint Conference on Neural Networks (IJCNN), Reviewer</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2025:</strong> International Conference on Intelligent Computing (ICIC), Reviewer</p>
+                </div>
+                
+                <div class="education-item">
+                    <p><strong>2025:</strong> AAAI 2026, Reviewer</p>
+                </div>
             </div>
-        </section>
+        </div>
         
-        <section id="research">
+        <!-- Research Interests Page -->
+        <div id="research" class="page">
             <h2>Research Interests Overview</h2>
             <div class="section-content">
                 <h3>Data-Driven Complex Adaptive Systems for Decision-Making</h3>
                 
                 <p>In nature, biological evolution, physical dynamics, and learning behavior form three interconnected adaptive mechanisms: Biological evolution & swarm intelligence drive adaptation through both genetic variation/natural selection and emergent collective behaviors; physical dynamics govern nonequilibrium systems' self-organization toward equilibrium states (e.g., thermodynamic entropy increase and dissipative structures); while learning enables individual behavioral adaptation through experience and interaction with the environment. This includes the reward hypothesis, where behavior is adapted based on the feedback received from actions, allowing individuals to optimize their strategies to achieve long-term goals. Additionally, neural networks model the brain's learning processes by adjusting the connections between neurons, similar to synaptic plasticity, improving decision-making through experience. Together, these mechanisms shape complex adaptive behaviors across scales.</p>
                 
-                <img src="https://github.com/user-attachments/assets/42b57c67-f950-4340-b89e-16b885bf78b8" alt="Research visualization" style="width: 100%; height: auto; margin: 1.5rem 0; border-radius: 5px;">
+                <img src="https://github.com/user-attachments/assets/42b57c67-f950-4340-b89e-16b885bf78b8" alt="Research visualization" class="research-image">
                 
                 <p>Specifically, these three adaptive mechanisms correspond to three distinct research domains: (1) evolutionary computation simultaneously models both biological evolution (through population-based genetic optimization) and swarm intelligence behaviors (via emergent agent coordination mechanisms), thereby capturing two fundamental layers of biological adaptation. (2) statistical physics formally characterizes self-organization via disorder-to-order transitions mathematically equivalent to physical phase transitions; and (3) machine learning explicitly emulates biological learning through both neural network training grounded in synaptic plasticity principles and reinforcement learning, where behaviors are adapted based on feedback from interactions with the environment, optimizing strategies to maximize long-term rewards. However, contemporary artificial intelligence has predominantly focused on intelligence paradigms centered around human intelligence (e.g., neural networks simulating cortical information processing), while systematically neglecting two equally fundamental adaptive mechanisms in nature: (1) evolutionary and swarm intelligence in biological systems, and (2) self-organizing intelligence in physical systems. I contend that advancing artificial intelligence requires moving beyond this anthropocentric paradigm to incorporate these more universal forms of natural intelligence. These systems demonstrate unique elegance through their inherent adaptive mechanisms. We are perpetually inspired by nature's ingenuity manifested in such self-organizing intelligence. I maintain that natural adaptation consistently surpasses artificial intervention in efficacy. My primary research therefore focuses on constructing data-driven frameworks to understand and harness these systems for enhanced decision-making.</p>
                 
@@ -254,9 +365,10 @@
                     <img src="https://github.com/user-attachments/assets/9f306bb7-b502-4956-a17c-ca3f8acac314" alt="Research image 3">
                 </div>
             </div>
-        </section>
+        </div>
         
-        <section id="publications">
+        <!-- Publications Page -->
+        <div id="publications" class="page">
             <h2>Publications and Preprints</h2>
             <div class="section-content">
                 <div class="publication-item">
@@ -347,9 +459,10 @@
                     <p><strong>Ouyang, K.</strong> Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization (JCR Q1,IF:3.8), Under review -- <em>Co Author</em></p>
                 </div>
             </div>
-        </section>
+        </div>
         
-        <section id="honors">
+        <!-- Honors Page -->
+        <div id="honors" class="page">
             <h2>Honors and Awards</h2>
             <div class="section-content">
                 <div class="honor-item">
@@ -377,7 +490,7 @@
                     <p>Outstanding Student Gold Award, University of Science and Technology of China</p>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     
     <footer>
@@ -385,5 +498,57 @@
             <p>&copy; 2024 Kaichen Ouyang. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Get all pages
+            const pages = document.querySelectorAll('.page');
+            
+            // Function to show a specific page
+            function showPage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show the selected page
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update active link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Update URL hash
+                window.location.hash = pageId;
+            }
+            
+            // Add click event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Check if there's a hash in the URL and show the corresponding page
+            if (window.location.hash) {
+                const pageId = window.location.hash.substring(1);
+                if (document.getElementById(pageId)) {
+                    showPage(pageId);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
