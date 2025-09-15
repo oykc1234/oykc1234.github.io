@@ -32,8 +32,26 @@
             min-height: 100vh;
         }
         
+        /* 视频背景样式 */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+        
+        header, nav, .container, footer {
+            position: relative;
+            z-index: 1;
+        }
+        
         header {
-            background-color: var(--primary-color);
+            background-color: rgba(44, 62, 80, 0.9); /* 增加透明度 */
             color: white;
             padding: 1.5rem 0;
             text-align: center;
@@ -49,7 +67,7 @@
         }
         
         nav {
-            background-color: var(--secondary-color);
+            background-color: rgba(52, 152, 219, 0.9); /* 增加透明度 */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -118,7 +136,7 @@
         }
         
         .section-content {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.85); /* 增加透明度 */
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -195,7 +213,7 @@
         }
         
         footer {
-            background-color: var(--dark-color);
+            background-color: rgba(44, 62, 80, 0.9); /* 增加透明度 */
             color: white;
             text-align: center;
             padding: 1.5rem 0;
@@ -220,7 +238,7 @@
         }
 
         .info-block {
-            background-color: #f8f9fa;
+            background-color: rgba(248, 249, 250, 0.9); /* 增加透明度 */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -249,7 +267,7 @@
         .gallery-container {
             margin: 2rem 0;
             padding: 1.5rem;
-            background-color: #f0f4f8;
+            background-color: rgba(240, 244, 248, 0.9); /* 增加透明度 */
             border-radius: 8px;
         }
         
@@ -304,7 +322,7 @@
         }
         
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9); /* 增加透明度 */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -372,10 +390,23 @@
             .section-content {
                 padding: 1.5rem;
             }
+            
+            /* 移动设备上减小视频大小 */
+            #bg-video {
+                width: 300%;
+                left: -100%;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- 视频背景 -->
+    <video autoplay muted loop id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+        <!-- 备用内容，如果视频无法加载时显示 -->
+        <!-- 您需要上传一个fallback-image.jpg文件或使用其他备用图片 -->
+    </video>
+    
     <header>
         
     </header>
@@ -519,7 +550,7 @@
                     <img src="https://github.com/user-attachments/assets/a465313a-316f-479a-a394-201a60d59f85" alt="Research image 3">
                 </div>
                 
-                <p>Specifically, these three adaptive mechanisms correspond to three distinct research domains: (1) evolutionary computation simultaneously models both biological evolution (through population-based genetic optimization) and swarm intelligence behaviors (via emergent agent coordination mechanisms), thereby capturing two fundamental layers of biological adaptation. (2) statistical physics formally characterizes self-organization via disorder-to-order transitions mathematically equivalent to physical phase transitions; and (3) machine learning explicitly emulates biological learning through both neural network training grounded in synaptic plasticity principles and reinforcement learning, where behaviors are adapted based on feedback from interactions with the environment, optimizing strategies to maximize long-term rewards. However, contemporary artificial intelligence has predominantly focused on intelligence paradigms centered around human intelligence (e.g., neural networks simulating cortical information processing), while systematically neglecting two equally fundamental adaptive mechanisms in nature: (1) evolutionary and swarm intelligence in biological systems, and (2) self-organizing intelligence in physical systems. I contend that advancing artificial intelligence requires moving beyond this anthropocentric paradigm to incorporate these more universal forms of natural intelligence. These systems demonstrate unique elegance through their inherent adaptive mechanisms. We are perpetually inspired by nature's ingenuity manifested in such self-organizing intelligence. I maintain that natural adaptation consistently surpasses artificial intervention in efficacy. My primary research therefore focuses on constructing data-driven frameworks to understand and harness these systems for enhanced decision-making.</p>
+                <p>Specifically, these three adaptive mechanisms correspond to three distinct research domains: (1) evolutionary computation simultaneously models both biological evolution (through population-based genetic optimization) and swarm intelligence behaviors (via emergent agent coordination mechanisms), thereby capturing two fundamental layers of biological adaptation. (2) statistical physics formally characterizes self-organization via disorder-to-order transitions mathematically equivalent to physical phase transitions; and (3) machine learning explicitly emulates biological learning through both neural network training grounded in synaptic plasticity principles and reinforcement learning, where behaviors are adapted based on feedback from interactions with the environment, optimizing strategies to maximize long-term rewards. However, contemporary artificial intelligence has predominantly focused on intelligence paradigms centered around human intelligence (e.e., neural networks simulating cortical information processing), while systematically neglecting two equally fundamental adaptive mechanisms in nature: (1) evolutionary and swarm intelligence in biological systems, and (2) self-organizing intelligence in physical systems. I contend that advancing artificial intelligence requires moving beyond this anthropocentric paradigm to incorporate these more universal forms of natural intelligence. These systems demonstrate unique elegance through their inherent adaptive mechanisms. We are perpetually inspired by nature's ingenuity manifested in such self-organizing intelligence. I maintain that natural adaptation consistently surpasses artificial intervention in efficacy. My primary research therefore focuses on constructing data-driven frameworks to understand and harness these systems for enhanced decision-making.</p>
                 
                 <h3>Research Interests:</h3>
                 <div class="research-interests">
