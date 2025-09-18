@@ -397,6 +397,56 @@
                 left: -100%;
             }
         }
+    /* Original Algorithm Section */
+    #original-algorithm .section-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自动调整列数 */
+        gap: 15px; /* 算法卡片之间的间隙 */
+        margin-top: 20px;
+    }
+    
+    .algorithm-card {
+        background-color: rgba(255, 255, 255, 0.9); /* 增加透明度 */
+        padding: 20px;
+        border: 2px solid #ddd; /* 为每个小方框添加边框 */
+        border-radius: 10px; /* 圆角效果 */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* 小阴影 */
+        font-family: 'Times New Roman', Times, serif;
+        transition: all 0.3s ease; /* 增加过渡效果 */
+    }
+    
+    .algorithm-card:hover {
+        transform: translateY(-5px); /* 鼠标悬停时轻微上移 */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 鼠标悬停时加大阴影 */
+    }
+    
+    .algorithm-card h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    
+    .algorithm-card p {
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+    }
+    
+    .algorithm-card a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    
+    .algorithm-card a:hover {
+        text-decoration: underline;
+    }
+    
+    /* 增加自适应 */
+    @media (max-width: 768px) {
+        #original-algorithm .section-content {
+            grid-template-columns: 1fr; /* 屏幕小于768px时显示为单列 */
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -752,6 +802,7 @@
                 </div>
             </div>
         </div>
+
 
     </main>
     
