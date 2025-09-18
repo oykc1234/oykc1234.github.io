@@ -344,6 +344,38 @@
             line-height: 1.7;
         }
         
+        /* 下载按钮样式 */
+        .download-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .video-container {
+            margin: 15px 0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .algorithm-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .algorithm-card:hover {
+            transform: translateY(-5px);
+        }
+        
         @media (max-width: 1024px) {
             .two-column {
                 grid-template-columns: 1fr;
@@ -417,6 +449,7 @@
             <li><a href="#research" class="nav-link" data-page="research">Research Interests</a></li>
             <li><a href="#publications" class="nav-link" data-page="publications">Publications</a></li>
             <li><a href="#honors" class="nav-link" data-page="honors">Honors</a></li>
+            <li><a href="#original-algorithm" class="nav-link" data-page="original-algorithm">Original Algorithm</a></li>
         </ul>
     </nav>
     
@@ -603,86 +636,7 @@
                     </div>
                     
                     <div class="publication-item card">
-                        <p>YQ Wang, C Xu, ML Fang, TZ Li, LW Zhang, DS Wei, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Study of nonequilibrium phase transitions mechanisms in exclusive network and node model of heterogeneous assignment based on real experimental data of KIF3AC and KIF3CC motors</span>. <span class="pub-journal">The European Physical Journal Plus</span> 137(10), 1-22, 2022. <span class="pub-role">Co Author</span> <span class="pub-doi"><a href="https://doi.org/10.1140/epjp/s13360-022-03372-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1140/epjp/s13360-022-03372-5</a></span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>YQ Wang, DS Wei, LW Zhang, TY Zhang, TZ Li, ML Fang, <span class="pub-author">KC Ouyang</span>, et al. <span class="pub-title">Physical mechanisms of exit dynamics in microchannels</span>. <span class="pub-journal">International Journal of Modern Physics B</span> 38(15), 2450193. <span class="pub-role">Co Author</span> <span class="pub-doi"><a href="https://doi.org/10.1142/S0217979224501935" target="_blank" rel="noopener noreferrer">https://doi.org/10.1142/S0217979224501935</a></span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang‡</span>, S Zhang‡, S Liu‡, J Tian, Y Li, H Tong, H Bai, YC Hu, WH Wang. <span class="pub-title">Graph Learning Metallic Glass Discovery from Wikipedia</span>. <span class="pub-journal">Nature Machine Intelligence</span> (Under Review). <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2507.19536" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2507.19536</a></span></p>
-                    </div>
-
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang</span>, S Fu. <span class="pub-title">Learn from Global Correlations: Enhancing Evolutionary Algorithm via Spectral GNN</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2412.17629, 2024. <span class="pub-role">First Author</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2412.17629" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2412.17629</a></span></p>
-                    </div>
-
-                    <div class="publication-item card">
-                        <p>S Gu, ..., <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization</span>. <span class="pub-journal">Communications In Nonlinear Science And Numerical Simulation</span>(Accept). <span class="pub-role">Co Author</span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang</span>, T Hou, JJ Lian, S Fu, Z Ke, D Wei, M Qiu, J Ouyang. <span class="pub-title">Stochastic Gradient-guided Adaptive Differential Evolution: Algorithm and Its Application in the Diagnosis of COVID-19, Influenza, and Bacterial Pneumonia</span>. <span class="pub-journal">Artificial Intelligence In Medicine</span> (Under Review). <span class="pub-role">First Author</span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Rethinking Over-Smoothing in Graph Neural Networks: A Perspective from Anderson Localization</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.05263, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.05263" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2507.05263</a></span></p>
-                    </div>
-
-
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Consciousness as a Jamming Phase</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.08197, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.08197" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2507.08197</a></span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p><span class="pub-author">K Ouyang</span>. <span class="pub-title">Why Flow Matching is Particle Swarm Optimization?</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2507.20810, 2025. <span class="pub-role">Sole First Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2507.20810" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2507.20810</a></span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>J Yu, J Yu, D Wei, X Sha, S Fu, M Qiu, Y Jin, <span class="pub-author">K Ouyang</span>. <span class="pub-title">Multi-Objective Mobile Damped Wave Algorithm (MOMDWA): A Novel Approach For Quantum System Control</span>. <span class="pub-journal">arXiv preprint</span> arXiv:2502.05228, 2025. <span class="pub-role">Corresponding Author</span> <span class="pub-doi"><a href="https://arxiv.org/abs/2502.05228" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2502.05228</a></span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>W Xiao, JJ Lian, <span class="pub-author">K Ouyang</span>, S Gu, Z Ke, D Wei, X Sha, J Wang, S Fu, M Qiu, C Xu. <span class="pub-title">Newton Downhill Optimizer for Global Optimization with Application to Breast Cancer Feature Selection</span>. <span class="pub-journal">Biomedical Signal Processing and Control</span> (Under Review). <span class="pub-role">Corresponding Author</span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>D Wei, <span class="pub-author">K Ouyang</span>, Z Wang, X Sha, M Qiu, Z Yi, AA Heidari, H Chen. <span class="pub-title">Multi-strategy boosted dung beetle algorithm and its application for bankruptcy prediction</span>. <span class="pub-journal">Neural Networks</span> (Under Review). <span class="pub-role">Corresponding Author</span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>JJ Lian, H Chen, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Twisted Convolutional Networks (TCNs): Enhancing Feature Interactions for Non-Spatial Data Classification</span>. <span class="pub-journal">Neural Networks</span> (Under Review). <span class="pub-role">Co Author</span></p>
-                    </div>
-                    
-                    <div class="publication-item card">
-                        <p>JJ Lian, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">IKUN: A mean-field game theoretic KD-tree density guided mechanism for swarm optimization</span>. <span class="pub-journal">Swarm and Evolutionary Computation</span> (Under Review). <span class="pub-role">Co Author</span></p>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <!-- Publication Gallery -->
-            <div class="gallery-container">
-                <h3 class="gallery-title">Publication Gallery</h3>
-                <div class="publication-gallery">
-                    <img src="https://github.com/user-attachments/assets/fed7b6c1-7806-471b-a591-863fa509f867" alt="Publication 1">
-                    <img src="https://github.com/user-attachments/assets/bee2d407-d06e-4ad3-b38a-77ee1c5ad230" alt="Publication 2">
-                    <img src="https://github.com/user-attachments/assets/e8af1c48-fc8a-47c5-8a80-917906c88dce" alt="Publication 3">
-                    <img src="https://github.com/user-attachments/assets/88ef3402-cc5a-423b-928a-fe24f915fa43" alt="Publication 4">
-                    <img src="https://github.com/user-attachments/assets/aacc46e4-b6ba-4c67-9dda-45c74ed895e5" alt="Publication 5">
-                    <img src="https://github.com/user-attachments/assets/791127fe-84c6-4935-8e63-4f3bc4eb76c3" alt="Publication 6">
-                    <img src="https://github.com/user-attachments/assets/14f71135-bc34-4d5e-8640-7a80938634b0" alt="Publication 7">
-                    <img src="https://github.com/user-attachments/assets/cbce6541-e06c-4435-8549-3e03ade74ddf" alt="Publication 8">
-                    <img src="https://github.com/user-attachments/assets/13cf97f6-516d-486b-b104-42d8e4f0f049" alt="Publication 9">
-                    <img src="https://github.com/user-attachments/assets/e9269a3f-9f15-48cb-a68b-020ad4b94223" alt="Publication 10">
-                    <img src="https://github.com/user-attachments/assets/80a07dc0-fc68-4338-8960-2216113894f7" alt="Publication 11">
-                    <img src="https://github.com/user-attachments/assets/2c1709a2-0379-4817-9188-a1996a3bc3e9" alt="Publication 12">
-                    <img src="https://github.com/user-attachments/assets/b07cd49c-4374-41cd-85ce-63b880ef0f4a" alt="Publication 13">
-                    <img src="https://github.com/user-attachments/assets/99ba3ef1-d28a-4b56-acdb-4dc16bb24d00" alt="Publication 14">
-                    <img src="https://github.com/user-attachments/assets/ac5371b8-9f2c-4135-8dcf-d1debe407a87" alt="Publication 15">
-                </div>
-            </div>
+                        <p>YQ Wang, C Xu, ML Fang, TZ Li, LW Zhang, DS Wei, <span class="pub-author">K Ouyang</span>, et al. <span class="pub-title">Study of nonequilibrium phase transitions mechanisms in exclusive network and node model of heterogeneous assignment based on real experimental data of KIF3AC and KIF3CC motors</span>. <span class="pub-journal">The European Physical Journal Plus</span> 137(10), 1-22, 2022. <span class="pub-role">Co Author</span> <span class="pub-doi"><a href="https://doi.org/10.1140/epjp/s13360-022-03372-5" target="_blank" rel="noopener noreferrer">https://doi.org极简风格
         </div>
         
         <!-- Honors Page -->
@@ -712,6 +666,61 @@
                 <div class="honor-item">
                     <div class="date">2020-2021</div>
                     <p>Outstanding Student Gold Award, University of Science and Technology of China</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Original Algorithm Page -->
+        <div id="original-algorithm" class="page">
+            <h2>Original Algorithms</h2>
+            <div class="section-content">
+                <p>Here you can explore the inspiration and implementation of my original algorithms. Each section includes a demonstration video and a download link for the source code.</p>
+                
+                <div class="content-grid">
+                    <!-- ESC Algorithm -->
+                    <div class="card algorithm-card">
+                        <h3>ESC Algorithm</h3>
+                        <p>Escape: an optimization method based on crowd evacuation behaviors</p>
+                        <div class="video-container">
+                            <video controls style="width: 100%; border-radius: 5px;">
+                                <source src="ESC.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <a href="Code of ESC.zip" download class="download-btn">Download ESC Code</a>
+                        </div>
+                    </div>
+                    
+                    <!-- BBO Algorithm -->
+                    <div class="card algorithm-card">
+                        <h3>BBO Algorithm</h3>
+                        <p>Beaver Behavior Optimizer: A novel metaheuristic algorithm</p>
+                        <div class="video-container">
+                            <video controls style="width: 100%; border-radius: 5px;">
+                                <source src="BBO.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <a href="Code of BBO.zip" download class="download-btn">Download BBO Code</a>
+                        </div>
+                    </div>
+                    
+                    <!-- WOO Algorithm -->
+                    <div class="card algorithm-card">
+                        <h3>WOO Algorithm</h3>
+                        <p>Wave Optics Optimizer: A novel meta-heuristic algorithm for engineering optimization</p>
+                        <div class="video-container">
+                            <video controls style="width: 100%; border-radius: 5px;">
+                                <source src="WOO.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <a href="Code of WOO.zip" download class="download-btn">Download WOO Code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
