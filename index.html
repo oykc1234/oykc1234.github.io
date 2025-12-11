@@ -654,7 +654,154 @@
                 </div>
             </div>
         </div>
-        
+                <!-- 新增的优化三角部分 -->
+                <div style="background: rgba(231, 76, 60, 0.1); padding: 2.5rem; border-radius: 10px; margin-bottom: 2.5rem; border-left: 5px solid var(--accent-color);">
+                    <h2 style="color: var(--accent-color); border-bottom: 2px solid var(--accent-color);">The Optimization Triangle: DL-EC-SP Synergy</h2>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <div style="display: inline-block; position: relative; width: 320px; height: 280px;">
+                            <!-- 三角图示 -->
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 140px solid transparent; border-right: 140px solid transparent; border-bottom: 240px solid rgba(52, 152, 219, 0.1);"></div>
+                            
+                            <!-- 三个顶点标签 -->
+                            <div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-weight: bold; color: var(--primary-color); background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                <span style="color: #e74c3c;">Statistical Physics</span><br>
+                                <small style="color: #666; font-size: 0.9rem;">Landscape Analysis</small>
+                            </div>
+                            
+                            <div style="position: absolute; bottom: 30px; left: 30px; font-weight: bold; color: var(--primary-color); background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                <span style="color: #2c3e50;">Evolutionary Computation</span><br>
+                                <small style="color: #666; font-size: 0.9rem;">Global Exploration</small>
+                            </div>
+                            
+                            <div style="position: absolute; bottom: 30px; right: 30px; font-weight: bold; color: var(--primary-color); background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                <span style="color: #3498db;">Deep Learning</span><br>
+                                <small style="color: #666; font-size: 0.9rem;">Local Refinement</small>
+                            </div>
+                            
+                            <!-- 双向箭头 -->
+                            <div style="position: absolute; top: 120px; left: 90px; width: 140px; height: 1px; background: linear-gradient(to right, #2c3e50, #3498db);">
+                                <div style="position: absolute; right: -5px; top: -4px; width: 0; height: 0; border-left: 5px solid #3498db; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                                <div style="position: absolute; left: -5px; top: -4px; width: 0; height: 0; border-right: 5px solid #2c3e50; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                            </div>
+                            
+                            <div style="position: absolute; top: 120px; right: 90px; width: 140px; height: 1px; background: linear-gradient(to right, #3498db, #e74c3c);">
+                                <div style="position: absolute; right: -5px; top: -4px; width: 0; height: 0; border-left: 5px solid #e74c3c; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                                <div style="position: absolute; left: -5px; top: -4px; width: 0; height: 0; border-right: 5px solid #3498db; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                            </div>
+                            
+                            <div style="position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%) rotate(60deg); width: 140px; height: 1px; background: linear-gradient(to right, #e74c3c, #2c3e50);">
+                                <div style="position: absolute; right: -5px; top: -4px; width: 0; height: 0; border-left: 5px solid #2c3e50; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                                <div style="position: absolute; left: -5px; top: -4px; width: 0; height: 0; border-right: 5px solid #e74c3c; border-top: 4px solid transparent; border-bottom: 4px solid transparent;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>1. Unified Optimization Perspective</h3>
+                    <p>Despite their different origins, all three fields share a common mathematical essence: <strong>optimization over complex landscapes</strong>:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                            <h4 style="color: #3498db; margin-top: 0;">Deep Learning</h4>
+                            <p><strong>Function:</strong> Loss minimization <code>L(θ)</code></p>
+                            <p><strong>Method:</strong> Gradient descent in parameter space</p>
+                            <p><strong>Analogy:</strong> Water flowing downhill</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                            <h4 style="color: #2c3e50; margin-top: 0;">Evolutionary Computation</h4>
+                            <p><strong>Function:</strong> Fitness maximization <code>F(x)</code></p>
+                            <p><strong>Method:</strong> Population-based stochastic search</p>
+                            <p><strong>Analogy:</strong> Species adapting to environment</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                            <h4 style="color: #e74c3c; margin-top: 0;">Statistical Physics</h4>
+                            <p><strong>Function:</strong> Free energy minimization <code>F(s)</code></p>
+                            <p><strong>Method:</strong> Statistical mechanics & Monte Carlo</p>
+                            <p><strong>Analogy:</strong> System reaching thermal equilibrium</p>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Unifying Concept:</strong> All three aim to find optimal states in high-dimensional spaces, where the objective function can be viewed as an <strong>energy landscape</strong>. The challenge is navigating these landscapes efficiently, avoiding local minima, and understanding their topological properties.</p>
+                    
+                    <h3>2. Bidirectional Interactions in the Triangle</h3>
+                    
+                    <h4>A. DL ↔ EC: Algorithm-Architecture Synergy</h4>
+                    <div style="background: rgba(52, 152, 219, 0.05); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #3498db;">
+                        <p><strong>EC → DL (Forward):</strong> Evolutionary algorithms <strong>automate the design</strong> of neural architectures, loss functions, and hyperparameters. They explore discrete, non-differentiable spaces that gradient methods cannot handle.</p>
+                        <p><strong>DL → EC (Reverse):</strong> Deep learning provides <strong>surrogate models</strong> to accelerate fitness evaluation, learns representations to guide evolutionary search, and enables neural-based variation operators.</p>
+                        <p><strong>Example:</strong> Neuroevolution uses EC to evolve NN architectures, while DL-trained models predict which evolutionary strategies will be most effective.</p>
+                    </div>
+                    
+                    <h4>B. DL ↔ SP: Theory-Implementation Bridge</h4>
+                    <div style="background: rgba(231, 76, 60, 0.05); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #e74c3c;">
+                        <p><strong>SP → DL (Forward):</strong> Statistical physics provides <strong>theoretical foundations</strong> for understanding loss landscapes (curvature, saddle points), inspires optimization strategies (simulated annealing, parallel tempering), and explains generalization through concepts like phase transitions.</p>
+                        <p><strong>DL → SP (Reverse):</strong> Deep learning serves as a <strong>computational tool</strong> for solving statistical physics problems: calculating partition functions, detecting phase transitions, learning order parameters, and even designing materials with desired properties (AI for Science).</p>
+                        <p><strong>Example:</strong> Physics-inspired learning rate schedules (annealing) improve DL training, while neural quantum states solve many-body quantum problems.</p>
+                    </div>
+                    
+                    <h4>C. EC ↔ SP: Dynamics-Design Feedback</h4>
+                    <div style="background: rgba(44, 62, 80, 0.05); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #2c3e50;">
+                        <p><strong>SP → EC (Forward):</strong> Statistical mechanics analyzes <strong>population dynamics</strong> (selection pressure as "temperature," diversity as "entropy"), predicts convergence behavior, and inspires adaptive parameter control based on thermodynamic principles.</p>
+                        <p><strong>EC → SP (Reverse):</strong> Evolutionary processes serve as <strong>controlled experiments</strong> for studying non-equilibrium statistical mechanics, testing theories of adaptation on fitness landscapes, and simulating co-evolutionary dynamics.</p>
+                        <p><strong>Example:</strong> Thermodynamic selection operators in EC maintain population diversity, while EC simulations validate theories of adaptation on rugged landscapes.</p>
+                    </div>
+                    
+                    <h3>3. Closed-Loop Optimization System</h3>
+                    <p>My research integrates these interactions into a <strong>self-improving optimization engine</strong>:</p>
+                    
+                    <div style="background: rgba(52, 152, 219, 0.1); padding: 2rem; border-radius: 10px; margin: 1.5rem 0; text-align: center;">
+                        <div style="font-weight: bold; margin-bottom: 1rem; color: var(--primary-color);">The Optimization Cycle</div>
+                        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem;">
+                            <div style="background: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="color: #2c3e50; font-weight: bold;">1. EC Exploration</div>
+                                <div style="font-size: 0.9rem; color: #666;">Global search in complex spaces</div>
+                            </div>
+                            <div style="font-size: 1.5rem;">→</div>
+                            <div style="background: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="color: #3498db; font-weight: bold;">2. DL Refinement</div>
+                                <div style="font-size: 0.9rem; color: #666;">Gradient-based local optimization</div>
+                            </div>
+                            <div style="font-size: 1.5rem;">→</div>
+                            <div style="background: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="color: #e74c3c; font-weight: bold;">3. SP Analysis</div>
+                                <div style="font-size: 0.9rem; color: #666;">Landscape characterization</div>
+                            </div>
+                            <div style="font-size: 1.5rem;">↻</div>
+                        </div>
+                        <div style="margin-top: 1rem; font-style: italic; color: #666;">
+                            Feedback loop: SP diagnostics guide adaptive control of EC and DL parameters
+                        </div>
+                    </div>
+                    
+                    <p>This triangle creates a <strong>virtuous cycle</strong> where each discipline both informs and is informed by the others. The ultimate goal is to develop <strong>meta-optimization systems</strong> that not only solve specific problems but also learn how to optimize more effectively over time.</p>
+                    
+                    <div style="background: rgba(44, 62, 80, 0.05); padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border: 1px solid rgba(44, 62, 80, 0.1);">
+                        <p style="font-weight: bold; margin-bottom: 0.5rem; color: var(--primary-color);">Research Implications:</p>
+                        <ul style="padding-left: 1.5rem;">
+                            <li><strong>For DL:</strong> More robust architectures and training procedures informed by evolutionary principles and physical insights</li>
+                            <li><strong>For EC:</strong> More efficient search strategies guided by gradient information and landscape analysis</li>
+                            <li><strong>For SP:</strong> New computational tools and testbeds for studying complex systems</li>
+                            <li><strong>Cross-disciplinary:</strong> A unified framework for understanding optimization across artificial and natural systems</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 优化三角部分结束 -->
+                
+                <h3>Data-Driven Complex Adaptive Systems for Decision-Making</h3>
+                <!-- 其余内容保持不变 -->
+                <p>In nature, biological evolution, physical dynamics, and learning behavior form three interconnected adaptive mechanisms...</p>
+                
+                <div class="image-grid">
+                    <img src="https://github.com/user-attachments/assets/1ff00291-698f-4f55-8a7e-7eddd4c04186" alt="Research image 1">
+                    <img src="https://github.com/user-attachments/assets/b79ac78c-a769-458d-8256-3a0076f97c80" alt="Research image 2">
+                    <img src="https://github.com/user-attachments/assets/a465313a-316f-479a-a394-201a60d59f85" alt="Research image 3">
+                </div>
+                
+                <!-- 其余内容保持不变 -->
+            </div>
+        </div>
         <!-- Publications Page -->
         <div id="publications" class="page">
             <h2>Publications and Preprints</h2>
